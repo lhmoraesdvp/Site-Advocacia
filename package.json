@@ -1,0 +1,10 @@
+{
+  "name": "site-advocacia",
+  "version": "1.0.0",
+  "description": "Site de Advocacia com Autenticação",
+  "main": "middleware.js",
+  "scripts": {
+    "start": "node middleware.js"
+  },
+  "dependencies": {}
+}
