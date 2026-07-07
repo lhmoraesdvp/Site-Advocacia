@@ -8,12 +8,13 @@
     
     // DEFINE A SUA SENHA AQUI DIRETO NO CÓDIGO
     const senhaCorreta = "lhmoraes"; 
-
+     alert(senhaCorreta);
+     alert(senhaDigitada);
     if (senhaDigitada === senhaCorreta) {
       // Salva no navegador que o usuário acertou a senha
-      localStorage.setItem("site_autenticado", "true");
+      //localStorage.setItem("site_autenticado", "true");
       // Redireciona para a página principal
-      window.location.href = "index.html";
+       window.location.href = "./index.html";
     } else {
       alert("Senha incorreta! Tente novamente.");
     }

@@ -1,425 +1,114 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <script>
-  // Verifica se o usuário já está logado
-  if (localStorage.getItem("site_autenticado") !== "true") {
-    // Se não estiver, redireciona imediatamente para a tela de login
-    window.location.href = "login.html";
-  }
-</script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-<title>Hero Advocacia</title>
-
-<style>
-
-:root{
-
-    --primary:#16263f;
-    --secondary:#c8a86b;
-    --text:#344054;
-    --light:#f8f9fb;
-    --white:#ffffff;
-
-}
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-
-font-family:'Inter',sans-serif;
-background:#fff;
-color:var(--text);
-
-}
-
-.hero{
-
-min-height:90vh;
-
-display:flex;
-align-items:center;
-
-padding:80px 8%;
-
-background:
-linear-gradient(rgba(255,255,255,.95),rgba(255,255,255,.95)),
-url("https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1800&q=80");
-
-background-size:cover;
-background-position:center;
-
-}
-
-.container{
-
-max-width:1300px;
-margin:auto;
-
-display:grid;
-grid-template-columns:1fr 500px;
-gap:70px;
-align-items:center;
-
-}
-
-.tag{
-
-display:inline-block;
-
-padding:8px 18px;
-
-border:1px solid rgba(200,168,107,.4);
-
-border-radius:50px;
-
-color:var(--secondary);
-
-font-size:.85rem;
-
-letter-spacing:2px;
-
-text-transform:uppercase;
-
-margin-bottom:30px;
-
-}
-
-h1{
-
-font-family:'Cormorant Garamond',serif;
-
-font-size:4rem;
-
-line-height:1.05;
-
-color:var(--primary);
-
-margin-bottom:30px;
-
-}
-
-.hero p{
-
-font-size:1.1rem;
-
-line-height:1.8;
-
-max-width:620px;
-
-margin-bottom:40px;
-
-}
-
-.buttons{
-
-display:flex;
-gap:18px;
-margin-bottom:45px;
-
-}
-
-.btn{
-
-padding:17px 34px;
-
-border-radius:8px;
-
-font-weight:600;
-
-text-decoration:none;
-
-transition:.3s;
-
-}
-
-.primary{
-
-background:var(--primary);
-
-color:white;
-
-}
-
-.primary:hover{
-
-background:#0d1a2e;
-
-}
-
-.outline{
-
-border:1px solid var(--primary);
-
-color:var(--primary);
-
-}
-
-.outline:hover{
-
-background:var(--primary);
-
-color:white;
-
-}
-
-.features{
-
-display:flex;
-gap:35px;
-flex-wrap:wrap;
-
-}
-
-.feature{
-
-display:flex;
-align-items:center;
-gap:10px;
-
-font-size:.95rem;
-
-}
-
-.dot{
-
-width:10px;
-height:10px;
-
-background:var(--secondary);
-
-border-radius:50%;
-
-}
-
-.card{
-
-background:white;
-
-padding:40px;
-
-border-radius:18px;
-
-box-shadow:0 20px 50px rgba(0,0,0,.08);
-
-text-align:center;
-
-}
-
-.card img{
-
-width:100%;
-
-border-radius:14px;
-
-margin-bottom:25px;
-
-}
-
-.card h3{
-
-font-family:'Cormorant Garamond',serif;
-
-font-size:2rem;
-
-color:var(--primary);
-
-margin-bottom:8px;
-
-}
-
-.card span{
-
-color:var(--secondary);
-
-font-weight:600;
-
-display:block;
-
-margin-bottom:25px;
-
-}
-
-.stats{
-
-display:grid;
-
-grid-template-columns:repeat(3,1fr);
-
-gap:20px;
-
-margin-top:30px;
-
-}
-
-.stats div{
-
-padding:18px;
-
-background:var(--light);
-
-border-radius:10px;
-
-}
-
-.stats strong{
-
-display:block;
-
-font-size:1.6rem;
-
-color:var(--primary);
-
-margin-bottom:5px;
-
-}
-
-@media(max-width:960px){
-
-.container{
-
-grid-template-columns:1fr;
-
-}
-
-h1{
-
-font-size:3rem;
-
-}
-
-.buttons{
-
-flex-direction:column;
-
-}
-
-.features{
-
-flex-direction:column;
-
-gap:15px;
-
-}
-
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de Advocacia</title>
+    <style>
+        #tela-login {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: #111;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            font-family: sans-serif;
+        }
+        .login-box {
+            background: #222;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
+            max-width: 320px;
+            width: 100%;
+        }
+        .loader {
+            border: 4px solid #333;
+            border-top: 4px solid #0070f3;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
 </head>
-
 <body>
 
-<section class="hero">
+    <!-- 1. CONTEÚDO REAL DO SITE -->
+    <div id="conteudo-site" style="display: none;">
+        <h1>Bem-vindo ao Site de Advocacia</h1>
+        <p>Este é o conteúdo protegido, liberado via validação de horário automatizada.</p>
+    </div>
 
-<div class="container">
+    <!-- 2. TELA DE VERIFICAÇÃO AUTOMÁTICA -->
+    <div id="tela-login">
+        <div class="login-box">
+            <h2>Autenticando</h2>
+            <p>Verificando credenciais de acesso cronológico...</p>
+            <div class="loader"></div>
+        </div>
+    </div>
 
-<div>
+    <!-- 3. SCRIPT DE VALIDAÇÃO AUTOMÁTICA -->
+    <script>
+        function liberarSite() {
+            document.getElementById("tela-login").style.display = "none";
+            document.getElementById("conteudo-site").style.display = "block";
+        }
 
-<span class="tag">
-Advocacia Trabalhista Empresarial
-</span>
+        // Se já foi autenticado antes, entra direto sem revalidar a hora
+        if (localStorage.getItem("site_autenticado") === "true") {
+            liberarSite();
+        } else {
+            // Executa a validação automática assim que a página carrega
+            validarHorarioBrasilia();
+        }
 
-<h1>
-Segurança jurídica para empresas que querem crescer com tranquilidade.
-</h1>
+        function validarHorarioBrasilia() {
+            // 1. CONFIGURE AQUI A HORA E MINUTO DE ACESSO DESEJADOS (Exemplo: 17:30)
+            const horaAlvo = 17;
+            const minutoAlvo = 30;
 
-<p>
-Assessoria especializada para empresas que desejam prevenir passivos trabalhistas, reduzir riscos e tomar decisões estratégicas com respaldo jurídico.
-</p>
+            // Converter o alvo para minutos totais desde o início do dia
+            const minutosAlvoTotais = (horaAlvo * 60) + minutoAlvo;
 
-<div class="buttons">
+            // 2. CAPTURAR O HORÁRIO ATUAL DO CLIENTE FORÇANDO FUSO DE BRASÍLIA (UTC-3)
+            const agora = new Date();
+            
+            // Convertemos para a string correspondente a Brasília e extraímos os dados
+            const opcoesBrasilia = { timeZone: 'America/Sao_Paulo', hour: '2-digit', minute: '2-digit', hour12: false };
+            const [horaBr, minutoBr] = agora.toLocaleTimeString('pt-BR', opcoesBrasilia).split(':').map(Number);
 
-<a href="#" class="btn primary">
-Agendar uma reunião
-</a>
+            // Converter o horário atual de Brasília para minutos totais do dia
+            const minutosAtuaisTotais = (horaBr * 60) + minutoBr;
 
-<a href="#" class="btn outline">
-Conheça nossa atuação
-</a>
+            // 3. CALCULAR A DIFERENÇA EM MINUTOS
+            const diferenca = Math.abs(minutosAtuaisTotais - minutosAlvoTotais);
 
-</div>
-
-<div class="features">
-
-<div class="feature">
-<div class="dot"></div>
-Atendimento personalizado
-</div>
-
-<div class="feature">
-<div class="dot"></div>
-Consultoria preventiva
-</div>
-
-<div class="feature">
-<div class="dot"></div>
-Foco em empresas
-</div>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<img src="/https://yata-apix-a428ff6d-c9e0-4943-a080-179963e1f03c.s3-object.locaweb.com.br/039494f9ceeb4a82a9c2a3a322d393b8.jpg">
-
-<h3>
-André Morais
-</h3>
-
-<span>
-Advogado Trabalhista Empresarial
-</span>
-
-<p>
-Atuação estratégica voltada à prevenção de conflitos, compliance trabalhista e assessoria jurídica para empresas de diversos segmentos.
-</p>
-
-<div class="stats">
-
-<div>
-
-<strong>+10</strong>
-
-Anos
-
-</div>
-
-<div>
-
-<strong>100%</strong>
-
-Atendimento
-
-</div>
-
-<div>
-
-<strong>Empresas</strong>
-
-Consultoria
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
+            // 4. VERIFICAR SE ESTÁ DENTRO DA JANELA DE 5 MINUTOS (adiantado ou atrasado)
+            if (diferenca <= 5) {
+                localStorage.setItem("site_autenticado", "true");
+                liberarSite();
+            } else {
+                // Se falhar, exibe uma mensagem clara e mantém bloqueado
+                alert("Acesso negado. Fora do horário permitido para sincronização.");
+                document.querySelector(".login-box h2").innerText = "Acesso Negado";
+                document.querySelector(".login-box p").innerText = "Este site só permite o acesso na janela de horário autorizada.";
+                document.querySelector(".loader").style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>

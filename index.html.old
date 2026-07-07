@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <script>
+  // Verifica se o usuário já está logado
+  if (localStorage.getItem("site_autenticado") !== "true") {
+    // Se não estiver, redireciona imediatamente para a tela de login
+    window.location.href = "login.html";
+  }
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<title>Hero Advocacia</title>
+
+<style>
+
+:root{
+
+    --primary:#16263f;
+    --secondary:#c8a86b;
+    --text:#344054;
+    --light:#f8f9fb;
+    --white:#ffffff;
+
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+font-family:'Inter',sans-serif;
+background:#fff;
+color:var(--text);
+
+}
+
+.hero{
+
+min-height:90vh;
+
+display:flex;
+align-items:center;
+
+padding:80px 8%;
+
+background:
+linear-gradient(rgba(255,255,255,.95),rgba(255,255,255,.95)),
+url("https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1800&q=80");
+
+background-size:cover;
+background-position:center;
+
+}
+
+.container{
+
+max-width:1300px;
+margin:auto;
+
+display:grid;
+grid-template-columns:1fr 500px;
+gap:70px;
+align-items:center;
+
+}
+
+.tag{
+
+display:inline-block;
+
+padding:8px 18px;
+
+border:1px solid rgba(200,168,107,.4);
+
+border-radius:50px;
+
+color:var(--secondary);
+
+font-size:.85rem;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+margin-bottom:30px;
+
+}
+
+h1{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:4rem;
+
+line-height:1.05;
+
+color:var(--primary);
+
+margin-bottom:30px;
+
+}
+
+.hero p{
+
+font-size:1.1rem;
+
+line-height:1.8;
+
+max-width:620px;
+
+margin-bottom:40px;
+
+}
+
+.buttons{
+
+display:flex;
+gap:18px;
+margin-bottom:45px;
+
+}
+
+.btn{
+
+padding:17px 34px;
+
+border-radius:8px;
+
+font-weight:600;
+
+text-decoration:none;
+
+transition:.3s;
+
+}
+
+.primary{
+
+background:var(--primary);
+
+color:white;
+
+}
+
+.primary:hover{
+
+background:#0d1a2e;
+
+}
+
+.outline{
+
+border:1px solid var(--primary);
+
+color:var(--primary);
+
+}
+
+.outline:hover{
+
+background:var(--primary);
+
+color:white;
+
+}
+
+.features{
+
+display:flex;
+gap:35px;
+flex-wrap:wrap;
+
+}
+
+.feature{
+
+display:flex;
+align-items:center;
+gap:10px;
+
+font-size:.95rem;
+
+}
+
+.dot{
+
+width:10px;
+height:10px;
+
+background:var(--secondary);
+
+border-radius:50%;
+
+}
+
+.card{
+
+background:white;
+
+padding:40px;
+
+border-radius:18px;
+
+box-shadow:0 20px 50px rgba(0,0,0,.08);
+
+text-align:center;
+
+}
+
+.card img{
+
+width:100%;
+
+border-radius:14px;
+
+margin-bottom:25px;
+
+}
+
+.card h3{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:2rem;
+
+color:var(--primary);
+
+margin-bottom:8px;
+
+}
+
+.card span{
+
+color:var(--secondary);
+
+font-weight:600;
+
+display:block;
+
+margin-bottom:25px;
+
+}
+
+.stats{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:20px;
+
+margin-top:30px;
+
+}
+
+.stats div{
+
+padding:18px;
+
+background:var(--light);
+
+border-radius:10px;
+
+}
+
+.stats strong{
+
+display:block;
+
+font-size:1.6rem;
+
+color:var(--primary);
+
+margin-bottom:5px;
+
+}
+
+@media(max-width:960px){
+
+.container{
+
+grid-template-columns:1fr;
+
+}
+
+h1{
+
+font-size:3rem;
+
+}
+
+.buttons{
+
+flex-direction:column;
+
+}
+
+.features{
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<section class="hero">
+
+<div class="container">
+
+<div>
+
+<span class="tag">
+Advocacia Trabalhista Empresarial
+</span>
+
+<h1>
+Segurança jurídica para empresas que querem crescer com tranquilidade.
+</h1>
+
+<p>
+Assessoria especializada para empresas que desejam prevenir passivos trabalhistas, reduzir riscos e tomar decisões estratégicas com respaldo jurídico.
+</p>
+
+<div class="buttons">
+
+<a href="#" class="btn primary">
+Agendar uma reunião
+</a>
+
+<a href="#" class="btn outline">
+Conheça nossa atuação
+</a>
+
+</div>
+
+<div class="features">
+
+<div class="feature">
+<div class="dot"></div>
+Atendimento personalizado
+</div>
+
+<div class="feature">
+<div class="dot"></div>
+Consultoria preventiva
+</div>
+
+<div class="feature">
+<div class="dot"></div>
+Foco em empresas
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="/https://yata-apix-a428ff6d-c9e0-4943-a080-179963e1f03c.s3-object.locaweb.com.br/039494f9ceeb4a82a9c2a3a322d393b8.jpg">
+
+<h3>
+André Morais
+</h3>
+
+<span>
+Advogado Trabalhista Empresarial
+</span>
+
+<p>
+Atuação estratégica voltada à prevenção de conflitos, compliance trabalhista e assessoria jurídica para empresas de diversos segmentos.
+</p>
+
+<div class="stats">
+
+<div>
+
+<strong>+10</strong>
+
+Anos
+
+</div>
+
+<div>
+
+<strong>100%</strong>
+
+Atendimento
+
+</div>
+
+<div>
+
+<strong>Empresas</strong>
+
+Consultoria
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</body>
+</html>
