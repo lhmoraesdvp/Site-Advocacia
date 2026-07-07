@@ -1,10 +1,8 @@
 {
   "name": "site-advocacia",
   "version": "1.0.0",
-  "description": "Site de Advocacia com Autenticação",
-  "main": "middleware.js",
+  "description": "Site de Advocacia",
   "scripts": {
-    "start": "node middleware.js"
-  },
-  "dependencies": {}
+    "build": "echo 'No build step'"
+  }
 }
