@@ -1,114 +1,349 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site de Advocacia</title>
-    <style>
-        #tela-login {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background-color: #111;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            z-index: 9999;
-            font-family: sans-serif;
-        }
-        .login-box {
-            background: #222;
-            padding: 30px;
-            border-radius: 8px;
-            text-align: center;
-            box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
-            max-width: 320px;
-            width: 100%;
-        }
-        .loader {
-            border: 4px solid #333;
-            border-top: 4px solid #0070f3;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            animation: spin 1s linear infinite;
-            margin: 20px auto;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Advogado Trabalhista Empresarial em Campinas | André Morais</title>
+
+<meta name="description" content="Assessoria jurídica trabalhista empresarial para empresas que desejam reduzir riscos, prevenir passivos e crescer com segurança jurídica.">
+
+<meta name="robots" content="index,follow">
+
+<link rel="canonical" href="https://andremorais.adv.br">
+
+<meta property="og:title" content="André Morais - Advogado Trabalhista Empresarial">
+<meta property="og:description" content="Proteja sua empresa contra riscos trabalhistas com assessoria jurídica especializada.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://andremorais.adv.br">
+
+<style>
+
+:root{
+--navy:#102a4c;
+--gold:#c9a56d;
+--gold-light:#e7d5b5;
+--text:#374151;
+--bg:#f8f6f2;
+--white:#ffffff;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family: Georgia, serif;
+background:var(--bg);
+color:var(--navy);
+line-height:1.6;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:80px 5%;
+position:relative;
+overflow:hidden;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+inset:0;
+background:url("assets/balanca.jpg") center center;
+background-size:cover;
+opacity:.05;
+}
+
+.container{
+max-width:1280px;
+width:100%;
+display:grid;
+grid-template-columns:1.1fr .9fr;
+gap:80px;
+align-items:center;
+position:relative;
+z-index:2;
+}
+
+.badge{
+display:inline-flex;
+padding:10px 18px;
+border:1px solid var(--gold-light);
+border-radius:999px;
+font-size:12px;
+letter-spacing:2px;
+text-transform:uppercase;
+color:var(--gold);
+margin-bottom:24px;
+font-family:sans-serif;
+}
+
+.hero h1{
+font-size:clamp(2.8rem,5vw,5rem);
+line-height:1.08;
+margin-bottom:28px;
+max-width:760px;
+}
+
+.hero p{
+font-family:sans-serif;
+font-size:1.1rem;
+max-width:650px;
+color:var(--text);
+margin-bottom:35px;
+}
+
+.cta-group{
+display:flex;
+gap:16px;
+flex-wrap:wrap;
+margin-bottom:40px;
+}
+
+.btn-primary{
+background:var(--navy);
+color:white;
+padding:16px 30px;
+border-radius:12px;
+text-decoration:none;
+font-family:sans-serif;
+font-weight:600;
+transition:.3s;
+}
+
+.btn-primary:hover{
+transform:translateY(-2px);
+}
+
+.btn-secondary{
+border:1px solid var(--navy);
+padding:16px 30px;
+border-radius:12px;
+text-decoration:none;
+color:var(--navy);
+font-family:sans-serif;
+font-weight:600;
+}
+
+.highlights{
+display:flex;
+gap:30px;
+flex-wrap:wrap;
+font-family:sans-serif;
+font-size:.95rem;
+}
+
+.highlights span{
+display:flex;
+align-items:center;
+gap:8px;
+}
+
+.highlights span::before{
+content:"●";
+color:var(--gold);
+}
+
+.profile-card{
+background:white;
+padding:35px;
+border-radius:28px;
+box-shadow:0 25px 60px rgba(0,0,0,.08);
+max-width:450px;
+margin-left:auto;
+}
+
+.profile-image{
+width:100%;
+aspect-ratio:4/5;
+object-fit:cover;
+border-radius:20px;
+margin-bottom:25px;
+background:#f3f3f3;
+}
+
+.profile-card h2{
+font-size:2rem;
+margin-bottom:8px;
+}
+
+.profile-role{
+font-family:sans-serif;
+color:var(--gold);
+margin-bottom:24px;
+}
+
+.profile-description{
+font-family:sans-serif;
+color:var(--text);
+margin-bottom:30px;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:12px;
+}
+
+.stat{
+background:#faf8f5;
+padding:18px;
+border-radius:14px;
+text-align:center;
+}
+
+.stat strong{
+display:block;
+font-size:1.7rem;
+color:var(--navy);
+}
+
+.stat span{
+font-family:sans-serif;
+font-size:.85rem;
+color:var(--text);
+}
+
+@media(max-width:992px){
+
+.container{
+grid-template-columns:1fr;
+}
+
+.profile-card{
+margin:auto;
+}
+
+.hero{
+padding-top:120px;
+}
+
+.hero h1{
+font-size:2.8rem;
+}
+
+}
+
+</style>
+
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"Attorney",
+"name":"André Morais",
+"url":"https://andremorais.adv.br",
+"areaServed":"Campinas",
+"address":{
+"@type":"PostalAddress",
+"addressLocality":"Campinas",
+"addressRegion":"SP",
+"addressCountry":"BR"
+},
+"legalName":"André Morais Advocacia",
+"telephone":"+55XXXXXXXXXXX"
+}
+</script>
+
 </head>
+
 <body>
 
-    <!-- 1. CONTEÚDO REAL DO SITE -->
-    <div id="conteudo-site" style="display: none;">
-        <h1>Bem-vindo ao Site de Advocacia</h1>
-        <p>Este é o conteúdo protegido, liberado via validação de horário automatizada.</p>
-    </div>
+<header class="hero">
 
-    <!-- 2. TELA DE VERIFICAÇÃO AUTOMÁTICA -->
-    <div id="tela-login">
-        <div class="login-box">
-            <h2>Autenticando</h2>
-            <p>Verificando credenciais de acesso cronológico...</p>
-            <div class="loader"></div>
-        </div>
-    </div>
+<div class="container">
 
-    <!-- 3. SCRIPT DE VALIDAÇÃO AUTOMÁTICA -->
-    <script>
-        function liberarSite() {
-            document.getElementById("tela-login").style.display = "none";
-            document.getElementById("conteudo-site").style.display = "block";
-        }
+<div>
 
-        // Se já foi autenticado antes, entra direto sem revalidar a hora
-        if (localStorage.getItem("site_autenticado") === "true") {
-            liberarSite();
-        } else {
-            // Executa a validação automática assim que a página carrega
-            validarHorarioBrasilia();
-        }
+<div class="badge">
+Advocacia Trabalhista Empresarial
+</div>
 
-        function validarHorarioBrasilia() {
-            // 1. CONFIGURE AQUI A HORA E MINUTO DE ACESSO DESEJADOS (Exemplo: 17:30)
-            const horaAlvo = 17;
-            const minutoAlvo = 30;
+<h1>
+Segurança jurídica para empresas que desejam crescer com tranquilidade.
+</h1>
 
-            // Converter o alvo para minutos totais desde o início do dia
-            const minutosAlvoTotais = (horaAlvo * 60) + minutoAlvo;
+<p>
+Assessoria especializada para empresas que desejam prevenir passivos trabalhistas,
+reduzir riscos operacionais e tomar decisões estratégicas com respaldo jurídico.
+</p>
 
-            // 2. CAPTURAR O HORÁRIO ATUAL DO CLIENTE FORÇANDO FUSO DE BRASÍLIA (UTC-3)
-            const agora = new Date();
-            
-            // Convertemos para a string correspondente a Brasília e extraímos os dados
-            const opcoesBrasilia = { timeZone: 'America/Sao_Paulo', hour: '2-digit', minute: '2-digit', hour12: false };
-            const [horaBr, minutoBr] = agora.toLocaleTimeString('pt-BR', opcoesBrasilia).split(':').map(Number);
+<div class="cta-group">
 
-            // Converter o horário atual de Brasília para minutos totais do dia
-            const minutosAtuaisTotais = (horaBr * 60) + minutoBr;
+<a
+href="https://wa.me/55SEUNUMERO"
+class="btn-primary"
+aria-label="Agendar reunião jurídica">
+Agendar uma reunião
+</a>
 
-            // 3. CALCULAR A DIFERENÇA EM MINUTOS
-            const diferenca = Math.abs(minutosAtuaisTotais - minutosAlvoTotais);
+<a
+href="#atuacao"
+class="btn-secondary">
+Conheça nossa atuação
+</a>
 
-            // 4. VERIFICAR SE ESTÁ DENTRO DA JANELA DE 5 MINUTOS (adiantado ou atrasado)
-            if (diferenca <= 5) {
-                localStorage.setItem("site_autenticado", "true");
-                liberarSite();
-            } else {
-                // Se falhar, exibe uma mensagem clara e mantém bloqueado
-                alert("Acesso negado. Fora do horário permitido para sincronização.");
-                document.querySelector(".login-box h2").innerText = "Acesso Negado";
-                document.querySelector(".login-box p").innerText = "Este site só permite o acesso na janela de horário autorizada.";
-                document.querySelector(".loader").style.display = "none";
-            }
-        }
-    </script>
+</div>
+
+<div class="highlights">
+<span>Atendimento personalizado</span>
+<span>Consultoria preventiva</span>
+<span>Foco em empresas</span>
+</div>
+
+</div>
+
+<article class="profile-card">
+
+<img
+src="assets/andre-morais.webp"
+alt="André Morais Advogado Trabalhista Empresarial"
+width="500"
+height="620"
+loading="eager"
+class="profile-image">
+
+<h2>André Morais</h2>
+
+<div class="profile-role">
+Advogado Trabalhista Empresarial
+</div>
+
+<p class="profile-description">
+Atuação estratégica voltada à prevenção de conflitos,
+compliance trabalhista e assessoria jurídica para empresas
+de diversos segmentos.
+</p>
+
+<div class="stats">
+
+<div class="stat">
+<strong>+10</strong>
+<span>Anos</span>
+</div>
+
+<div class="stat">
+<strong>100%</strong>
+<span>Atendimento</span>
+</div>
+
+<div class="stat">
+<strong>Empresas</strong>
+<span>Consultoria</span>
+</div>
+
+</div>
+
+</article>
+
+</div>
+
+</header>
+
 </body>
 </html>

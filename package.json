@@ -1,8 +1,0 @@
-{
-  "name": "site-advocacia",
-  "version": "1.0.0",
-  "description": "Site de Advocacia",
-  "scripts": {
-    "build": "echo 'No build step'"
-  }
-}
