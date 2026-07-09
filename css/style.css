@@ -29,12 +29,62 @@ var(--navy);
 overflow-x:hidden;
 
 }
+.navbar{
+    height:80px;
+    display:flex;
+    align-items:center;
+}
+
+.nav-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    text-decoration:none;
+    display:flex;
+    flex-direction:column;
+}
+
+.logo-name{
+    font-size:1.25rem;
+    font-weight:700;
+    color:var(--navy);
+}
+
+.logo-subtitle{
+    font-size:.75rem;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    color:var(--gold);
+}
+
+.nav-links{
+    display:flex;
+    gap:2rem;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:var(--navy);
+    font-size:.95rem;
+}
+
+.nav-cta{
+    text-decoration:none;
+    background:var(--navy);
+    color:white;
+    padding:.9rem 1.4rem;
+    border-radius:999px;
+    font-size:.9rem;
+}
 
 .hero{
     max-height:90vh;
     display:flex;
     align-items:center;
-    padding:20px 5%;
+    padding:20 px 5%;
 }
 
 .container{
