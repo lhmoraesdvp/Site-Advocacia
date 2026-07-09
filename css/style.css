@@ -33,15 +33,16 @@ overflow-x:hidden;
     height:80px;
     display:flex;
     align-items:center;
-    padding-left: 40px;
+    /* padding-left: 5px; */
     background-color: transparent;
      /* background-color: red; */
 }
 
-.nav-content{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+.nav-content {
+    display: flex;
+    justify-content: flex-start; /* Altera de space-between para flex-start */
+    align-items: center;
+    gap: 40px; /* Adiciona um espaço fixo entre o logo e o bloco de links */
 }
 
 .logo{
@@ -411,6 +412,20 @@ position:relative;
 /* display:flex; */
 /* justify-content:center; */
 /* background-color: green; */
-    margin-top: -200px; */
+    margin-top: -200px; 
 
+}
+/* Faz o container principal alinhar o logo e o bloco de links à esquerda */
+.nav-content {
+    /* background-color: red; */
+    padding-left: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px; /* Altere este valor para aumentar ou diminuir a distância entre o logo e os links */
+}
+
+/* Faz com que o último link ("Área do Cliente") seja empurrado sozinho para a extrema direita */
+.nav-links a:last-child {
+    margin-left: auto;
 }
