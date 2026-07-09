@@ -70,6 +70,10 @@ overflow-x:hidden;
 .nav-links{
     display:flex;
     gap:2rem;
+    position: relative;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .nav-links a{
@@ -77,6 +81,23 @@ overflow-x:hidden;
     color:var(--navy);
     font-size:.95rem;
 }
+.nav-links a:hover {
+    color: var(--primary);
+}
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: width 0.3s ease;
+}
+.nav-links a:hover::after {
+    width: 100%;
+}
+
 
 .nav-cta{
     text-decoration:none;
