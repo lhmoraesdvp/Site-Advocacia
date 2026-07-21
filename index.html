@@ -21,6 +21,7 @@
 
   <!-- Arquivo de estilos principal CSS -->
   <link rel="stylesheet" href="./css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body>
@@ -238,6 +239,105 @@ Com sólida experiência em litígios de alta complexidade e sensibilidade para 
   </div>
 </section>
 
+ <section class="about-section">
+        <div class="about-container">
+            
+            <!-- Coluna Esquerda: Texto + Benefícios + CTA -->
+            <div class="about-content">
+                <div class="badge">
+                    <i data-lucide="shield-check" style="width: 16px; height: 16px;"></i>
+                    Advocacia Trabalhista Empresarial
+                </div>
+
+                <h2 class="about-title">
+                    Protegendo e viabilizando o crescimento de <span>grandes negócios</span>.
+                </h2>
+
+                <p class="about-subtitle">
+                    Unimos conhecimento jurídico altamente especializado a uma visão estratégica corporativa. Oferecemos uma nova experiência em assessoria jurídica, focada na prevenção de riscos e na máxima eficiência de resultados.
+                </p>
+
+                <!-- Cards de Recursos/Pilares -->
+                <div class="features-grid">
+                    
+                    <div class="feature-card">
+                        <div class="icon-box">
+                            <i data-lucide="briefcase"></i>
+                        </div>
+                        <div class="feature-info">
+                            <h4>Atuação Estratégica & Personalizada</h4>
+                            <p>Soluções sob medida para a realidade da sua empresa, focando na segurança dos negócios e redução de passivos.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="icon-box">
+                            <i data-lucide="message-square-text"></i>
+                        </div>
+                        <div class="feature-info">
+                            <h4>Clareza e Proximidade</h4>
+                            <p>Comunicação transparente, sem "juridiquês", fortalecendo relações colaborativas com todos os envolvidos.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="icon-box">
+                            <i data-lucide="scale"></i>
+                        </div>
+                        <div class="feature-info">
+                            <h4>Compromisso & Conformidade</h4>
+                            <p>Trabalho pautado na ética rigorosa para assegurar a conformidade legal e proteger o pilar da confiança do seu negócio.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Métricas / Indicadores -->
+                <div class="stats-bar">
+                    <div class="stat-item">
+                        <span class="stat-number">+10 Anos</span>
+                        <span class="stat-label">de Atuação Jurídica</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Foco Empresarial</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">Especializada</span>
+                        <span class="stat-label">Prevenção e Litígio</span>
+                    </div>
+                </div>
+
+                <!-- Botão de Ação (CTA) -->
+                <a href="#contato" class="cta-btn">
+                    Falar com um Advogado Especialista
+                    <i data-lucide="arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- Coluna Direita: Foto Profissional + Citação -->
+            <div class="about-media">
+                <div class="image-wrapper">
+                    <!-- COLOQUE AQUI O CAMINHO DA SUA FOTO DA IMAGEM 2 -->
+                    <img src="./images/andre.jpg" alt="Advogado Especialista" class="lawyer-img">
+                    
+                    <div class="badge-floating">
+                        <strong>Advocacia Trabalhista</strong>
+                        <span>Assessoria Corporativa</span>
+                    </div>
+                </div>
+
+                <div class="quote-card">
+                    <p>
+                        "Nascemos do sentimento de que a advocacia trabalhista voltada para empresas carece de novas abordagens: mais ágeis, estratégicas e focadas em viabilizar novos negócios com total segurança."
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.9.0/countUp.umd.min.js"></script>
 <script>
@@ -263,7 +363,9 @@ const observer = new IntersectionObserver((entries) => {
     });
 
 });
-
+  
+        lucide.createIcons();
+  
 
 </script>
 </body>
