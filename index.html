@@ -210,6 +210,62 @@ Com sólida experiência em litígios de alta complexidade e sensibilidade para 
     </div>
 
 </section>
+
+<section class="conquistas-section">
+  <h2 class="title">NOSSAS CONQUISTAS</h2>
+
+  <div class="cards-grid">
+    <!-- Card 1 -->
+    <div class="stat-card">
+      <div class="dotted-bg"></div>
+      <span class="stat-number">+R$ 3,49 M</span>
+      <p class="stat-label">SAVING EM ACORDOS JUDICIAIS</p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="stat-card">
+      <div class="dotted-bg"></div>
+      <span class="stat-number">+ R$ 6,05 M</span>
+      <p class="stat-label">SAVING EM SENTENÇAS FAVORÁVEIS</p>
+    </div>
+    <!-- Card 23-->
+
+       <div class="stat-card">
+      <div class="dotted-bg"></div>
+      <span class="stat-number">+ R$ 36.87 M</span>
+      <p class="stat-label">Em Prevenção De Riscos</p>
+    </div>
+  </div>
+</section>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.9.0/countUp.umd.min.js"></script>
+<script>
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            new countUp.CountUp('saving1', 3.49, {
+                decimalPlaces: 2,
+                duration: 2.5
+            }).start();
+
+            new countUp.CountUp('saving2', 6.05, {
+                decimalPlaces: 2,
+                duration: 2.5
+            }).start();
+
+            observer.disconnect();
+        }
+
+    });
+
+});
+
+
+</script>
 </body>
 
 </html>
