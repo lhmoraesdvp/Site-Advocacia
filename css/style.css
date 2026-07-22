@@ -109,9 +109,22 @@ body {
   display: inline-block !important;
 }
 
-.nav-links a:hover {
-  background: #015663;
-  color: white;
+.mobile-menu-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--navy);
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  z-index: 1002;
+}
+
+.mobile-menu-btn svg {
+  width: 28px;
+  height: 28px;
+  stroke: currentColor;
 }
 
 
@@ -1330,6 +1343,47 @@ body {
 }
 
 @media (max-width: 768px) {
+  .mobile-menu-btn {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-links {
+    position: fixed !important;
+    top: 0 !important;
+    right: -100% !important;
+    width: 280px !important;
+    height: 100vh !important;
+    background-color: #0b5061 !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    padding: 100px 24px 40px 24px !important;
+    gap: 16px !important;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.25) !important;
+    transition: right 0.35s ease !important;
+    z-index: 1000 !important;
+  }
+
+  .nav-links.active {
+    right: 0 !important;
+  }
+
+  .nav-links a {
+    color: #ffffff !important;
+    font-size: 1.1rem !important;
+    width: 100% !important;
+    padding: 12px 16px !important;
+    border-radius: 8px !important;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    background: rgba(255, 255, 255, 0.18) !important;
+    color: #ffffff !important;
+  }
+
   .footer-container {
     grid-template-columns: 1fr !important;
     gap: 32px !important;

@@ -25,14 +25,18 @@
 
   <!-- Menu de navegação principal (Navbar) -->
   <header class="navbar">
-    <div class="container nav-content">
+    <div class="nav-content">
       <a href="./index.html" class="logo">
         <img src="images/logo.png" alt="Logo André Morais Advocacia">
       </a>
 
-      <nav class="nav-links">
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir Menu">
+        <i data-lucide="menu"></i>
+      </button>
+
+      <nav class="nav-links" id="navLinks">
         <a href="./index.html">Home</a>
-        <a href="./consultoria.html" class="active" style="color: #0b5061; font-weight: 600;">Consultoria</a>
+        <a href="./consultoria.html" class="active">Consultoria</a>
         <a href="#litigios">Litígios</a>
         <a href="#conhecimento">Conhecimento</a>
         <a href="#contato">Contato</a>
@@ -274,6 +278,29 @@
 
   <script>
     lucide.createIcons();
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navLinks = document.getElementById('navLinks');
+
+    if (mobileMenuBtn && navLinks) {
+      mobileMenuBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        navLinks.classList.toggle('active');
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+          navLinks.classList.remove('active');
+        }
+      });
+
+      navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('active');
+        });
+      });
+    }
   </script>
 </body>
 

@@ -28,33 +28,23 @@
 
   <!-- Menu de navegação principal (Navbar) -->
   <header class="navbar">
-    <div class="container nav-content">
-
-      <!-- Logo da marca -->
-      <a href="#" class="logo">
-        <!-- Nome/Subtítulo em texto (Comentado originalmente):
-        <span class="logo-name">André Morais</span>
-        <span class="logo-subtitle">Advocacia Empresarial</span> 
-        -->
+    <div class="nav-content">
+      <a href="index.html" class="logo">
         <img src="images/logo.png" alt="Logo André Morais Advocacia">
       </a>
 
-      <!-- Links de navegação do menu -->
-      <nav class="nav-links">
-        <!-- <a href="#home">Home</a> -->
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir Menu">
+        <i data-lucide="menu"></i>
+      </button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="active">Home</a>
         <a href="consultoria.html">Consultoria</a>
         <a href="#litigios">Litígios</a>
         <a href="#conhecimento">Conhecimento</a>
         <a href="#contato">Contato</a>
         <a href="#cliente">Área do Cliente</a>
       </nav>
-
-      <!-- Botão de ação do menu (Comentado originalmente):
-      <a href="#agendar" class="nav-cta">
-        Agendar reunião
-      </a> 
-      -->
-
     </div>
   </header>
 
@@ -422,9 +412,30 @@ const observer = new IntersectionObserver((entries) => {
 });
   
         lucide.createIcons();
-  
 
-</script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        if (mobileMenuBtn && navLinks) {
+          mobileMenuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            navLinks.classList.toggle('active');
+          });
+
+          document.addEventListener('click', (e) => {
+            if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+              navLinks.classList.remove('active');
+            }
+          });
+
+          navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+              navLinks.classList.remove('active');
+            });
+          });
+        }
+    </script>
 </body>
 
 </html>
