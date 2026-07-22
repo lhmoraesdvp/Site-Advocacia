@@ -412,7 +412,7 @@ position:relative;
 /* display:flex; */
 /* justify-content:center; */
 /* background-color: green; */
-    margin-top: -200px; 
+    margin-top: -200px;
 
 }
 /* Faz o container principal alinhar o logo e o bloco de links à esquerda */
@@ -773,7 +773,7 @@ position:relative;
   align-items: center;
   justify-content: center;
   /* Espaçamento interno maior para afastar o texto do círculo */
-  padding: 40px; 
+  padding: 40px;
 }
 
 .dotted-bg {
@@ -789,8 +789,8 @@ position:relative;
   mask-image: radial-gradient(circle, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 70%);
   z-index: 1;
   /* NOVO: Adiciona animação e desfoque suave */
-  filter: blur(0.5px); 
-  animation: pulse 4s ease-in-out infinite; 
+  filter: blur(0.5px);
+  animation: pulse 4s ease-in-out infinite;
 }
 
 
@@ -1012,7 +1012,155 @@ position:relative;
             color: var(--text-dark);
             line-height: 1.6;
         }
+.site-footer {
+            background-color: #0b5061; /* Azul petróleo da paleta original */
+            color: #ffffff;
+            padding: 50px 0 20px 0;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
 
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        /* Coluna 1: Marca */
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            /* background-color: red; */
+            margin-top: -50px;
+        }
+
+        .logo-box {
+            display: flex;
+            align-items: top;
+            gap: 15px;
+        }
+
+        .logo-symbol {
+            width: 50px;
+            height: 50px;
+        }
+
+        .brand-text h2 {
+            font-size: 1.35rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #ffffff;
+            line-height: 1.2;
+        }
+
+        .brand-text span {
+            font-size: 0.8rem;
+            font-weight: 300;
+            color: #b0d4de;
+            letter-spacing: 1px;
+            display: block;
+            margin-top: 3px;
+        }
+
+        .brand-description {
+            color: #d1e4eb;
+            font-size: 0.88rem;
+            font-weight: 300;
+            max-width: 320px;
+        }
+
+        /* Títulos de Seção */
+        .footer-title {
+            font-size: 0.88rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #89c0d1;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 8px;
+        }
+
+        .footer-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 28px;
+            height: 2px;
+            background-color: #2793ac;
+        }
+
+        /* Listas e Links */
+        .footer-info {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .footer-info li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            color: #e2f0f4;
+            font-weight: 300;
+        }
+
+        .footer-info i {
+            color: #89c0d1;
+            font-size: 1.05rem;
+            margin-top: 3px;
+            width: 18px;
+            text-align: center;
+        }
+
+        .footer-info a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .footer-info a:hover {
+            color: #89c0d1;
+        }
+
+        /* Botão Destaque WhatsApp */
+        .btn-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: rgba(255, 255, 255, 0.08);
+            color: #ffffff !important;
+            padding: 8px 14px;
+            border-radius: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            font-size: 0.88rem;
+            margin-top: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #25d366;
+            border-color: #25d366;
+            transform: translateY(-2px);
+        }
+
+        /* Copyright Bottom Bar */
+        .footer-bottom {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            font-size: 0.8rem;
+            color: #92b8c3;
+            font-weight: 300;
+        }
         /* Responsividade (Mobile / Tablet) */
         @media (max-width: 992px) {
             .about-container { grid-template-columns: 1fr; gap: 40px; }
@@ -1026,7 +1174,9 @@ position:relative;
             .stats-bar { flex-direction: column; gap: 15px; }
             .cta-btn { width: 100%; }
         }
-   
+   .logo-symbol {
+    filter: brightness(0) invert(1);
+}
 
 /* NOVO: Animação de pulsação */
 @keyframes pulse {
