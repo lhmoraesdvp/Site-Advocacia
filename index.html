@@ -21,7 +21,7 @@
 
   <!-- Arquivo de estilos principal CSS -->
   <link rel="stylesheet" href="./css/style.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body>
@@ -40,8 +40,8 @@
       <nav class="nav-links" id="navLinks">
         <a href="index.html" class="active">Home</a>
         <a href="consultoria.html">Consultoria</a>
-        <a href="#litigios">Litígios</a>
-        <a href="#conhecimento">Conhecimento</a>
+        <a href="litigios.html">Litígios</a>
+        <a href="conhecimento.html">Conhecimento</a>
         <a href="#contato">Contato</a>
         <a href="#cliente">Área do Cliente</a>
       </nav>
@@ -99,32 +99,8 @@
           </span>
 
           <p>
-            <!-- Atuação estratégica voltada à prevenção de conflitos,
-            compliance trabalhista e assessoria jurídica empresarial. -->
             "Temos o compromisso de guiar as empresas no caminho da legalidade e da integridade, construindo um ambiente de trabalho justo e próspero."
           </p>
-
-          <!-- Bloco de estatísticas e métricas (Comentado originalmente) -->
-          <div class="stats">
-            <!-- 
-            <div class="stat">
-              <strong>+10</strong>
-              <span>Anos</span>
-            </div> 
-            -->
-
-            <!-- 
-            <div class="stat">
-              <strong>100%</strong>
-              <span>Empresas</span>
-            </div>
-
-            <div class="stat">
-              <strong>Campinas</strong>
-              <span>SP</span>
-            </div> 
-            -->
-          </div>
 
         </div>
 
@@ -132,9 +108,6 @@
 
     </div>
   </header>
-
-  <!-- Script de funcionalidades em JavaScript -->
-  <script src="./js/main.js"></script>
 
   <section class="services">
 
@@ -197,245 +170,264 @@ Com sólida experiência em litígios de alta complexidade e sensibilidade para 
             </div>
         </article>
 
-    
     </div>
 
-</section>
+  </section>
 
-<section class="conquistas-section">
-  <h2 class="title">NOSSAS CONQUISTAS</h2>
+  <section class="conquistas-section" id="conquistas">
+    <h2 class="title">NOSSAS CONQUISTAS</h2>
 
-  <div class="cards-grid">
-    <!-- Card 1 -->
-    <div class="stat-card">
-      <div class="dotted-bg"></div>
-      <span class="stat-number">+R$ 3,49 M</span>
-      <p class="stat-label">SAVING EM ACORDOS JUDICIAIS</p>
+    <div class="cards-grid">
+      <!-- Card 1 -->
+      <div class="stat-card">
+        <div class="dotted-bg"></div>
+        <span class="stat-number">+R$ <span id="saving1">0</span> M</span>
+        <p class="stat-label">SAVING EM ACORDOS JUDICIAIS</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="stat-card">
+        <div class="dotted-bg"></div>
+        <span class="stat-number">+ R$ <span id="saving2">0</span> M</span>
+        <p class="stat-label">SAVING EM SENTENÇAS FAVORÁVEIS</p>
+      </div>
+      
+      <!-- Card 3 -->
+      <div class="stat-card">
+        <div class="dotted-bg"></div>
+        <span class="stat-number">+ R$ <span id="saving3">0</span> M</span>
+        <p class="stat-label">Em Prevenção De Riscos</p>
+      </div>
     </div>
+  </section>
 
-    <!-- Card 2 -->
-    <div class="stat-card">
-      <div class="dotted-bg"></div>
-      <span class="stat-number">+ R$ 6,05 M</span>
-      <p class="stat-label">SAVING EM SENTENÇAS FAVORÁVEIS</p>
-    </div>
-    <!-- Card 23-->
-
-       <div class="stat-card">
-      <div class="dotted-bg"></div>
-      <span class="stat-number">+ R$ 36.87 M</span>
-      <p class="stat-label">Em Prevenção De Riscos</p>
-    </div>
-  </div>
-</section>
-
- <section class="about-section">
-        <div class="about-container">
-            
-            <!-- Coluna Esquerda: Texto + Benefícios + CTA -->
-            <div class="about-content">
-                <div class="badge">
-                    <i data-lucide="shield-check" style="width: 16px; height: 16px;"></i>
-                    Advocacia Trabalhista Empresarial
-                </div>
-
-                <h2 class="about-title">
-                    Protegendo e viabilizando o crescimento de <span>grandes negócios</span>.
-                </h2>
-
-                <p class="about-subtitle">
-                    Unimos conhecimento jurídico altamente especializado a uma visão estratégica corporativa. Oferecemos uma nova experiência em assessoria jurídica, focada na prevenção de riscos e na máxima eficiência de resultados.
-                </p>
-
-                <!-- Cards de Recursos/Pilares -->
-                <div class="features-grid">
-                    
-                    <div class="feature-card">
-                        <div class="icon-box">
-                            <i data-lucide="briefcase"></i>
-                        </div>
-                        <div class="feature-info">
-                            <h4>Atuação Estratégica & Personalizada</h4>
-                            <p>Soluções sob medida para a realidade da sua empresa, focando na segurança dos negócios e redução de passivos.</p>
-                        </div>
-                    </div>
-
-                    <div class="feature-card">
-                        <div class="icon-box">
-                            <i data-lucide="message-square-text"></i>
-                        </div>
-                        <div class="feature-info">
-                            <h4>Clareza e Proximidade</h4>
-                            <p>Comunicação transparente, sem "juridiquês", fortalecendo relações colaborativas com todos os envolvidos.</p>
-                        </div>
-                    </div>
-
-                    <div class="feature-card">
-                        <div class="icon-box">
-                            <i data-lucide="scale"></i>
-                        </div>
-                        <div class="feature-info">
-                            <h4>Compromisso & Conformidade</h4>
-                            <p>Trabalho pautado na ética rigorosa para assegurar a conformidade legal e proteger o pilar da confiança do seu negócio.</p>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- Métricas / Indicadores -->
-                <div class="stats-bar">
-                    <div class="stat-item">
-                        <span class="stat-number">+10 Anos</span>
-                        <span class="stat-label">de Atuação Jurídica</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">100%</span>
-                        <span class="stat-label">Foco Empresarial</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">Especializada</span>
-                        <span class="stat-label">Prevenção e Litígio</span>
-                    </div>
-                </div>
-
-                <!-- Botão de Ação (CTA) -->
-                <a href="#contato" class="cta-btn">
-                    Falar com um Advogado Especialista
-                    <i data-lucide="arrow-right"></i>
-                </a>
+  <section class="about-section">
+    <div class="about-container">
+        
+        <!-- Coluna Esquerda: Texto + Benefícios + CTA -->
+        <div class="about-content">
+            <div class="badge">
+                <i data-lucide="shield-check" style="width: 16px; height: 16px;"></i>
+                Advocacia Trabalhista Empresarial
             </div>
 
-            <!-- Coluna Direita: Foto Profissional + Citação -->
-            <div class="about-media">
-                <div class="image-wrapper">
-                    <!-- COLOQUE AQUI O CAMINHO DA SUA FOTO DA IMAGEM 2 -->
-                    <img src="./images/andre.jpg" alt="Advogado Especialista" class="lawyer-img">
-                    
-                    <div class="badge-floating">
-                        <strong>Advocacia Trabalhista</strong>
-                        <span>Assessoria Corporativa</span>
+            <h2 class="about-title">
+                Protegendo e viabilizando o crescimento de <span>grandes negócios</span>.
+            </h2>
+
+            <p class="about-subtitle">
+                Unimos conhecimento jurídico altamente especializado a uma visão estratégica corporativa. Oferecemos uma nova experiência em assessoria jurídica, focada na prevenção de riscos e na máxima eficiência de resultados.
+            </p>
+
+            <!-- Cards de Recursos/Pilares -->
+            <div class="features-grid">
+                
+                <div class="feature-card">
+                    <div class="icon-box">
+                        <i data-lucide="briefcase"></i>
+                    </div>
+                    <div class="feature-info">
+                        <h4>Atuação Estratégica & Personalizada</h4>
+                        <p>Soluções sob medida para a realidade da sua empresa, focando na segurança dos negócios e redução de passivos.</p>
                     </div>
                 </div>
 
-                <div class="quote-card">
-                    <p>
-                        "Nascemos do sentimento de que a advocacia trabalhista voltada para empresas carece de novas abordagens: mais ágeis, estratégicas e focadas em viabilizar novos negócios com total segurança."
-                    </p>
+                <div class="feature-card">
+                    <div class="icon-box">
+                        <i data-lucide="message-square-text"></i>
+                    </div>
+                    <div class="feature-info">
+                        <h4>Clareza e Proximidade</h4>
+                        <p>Comunicação transparente, sem "juridiquês", fortalecendo relações colaborativas com todos os envolvidos.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon-box">
+                        <i data-lucide="scale"></i>
+                    </div>
+                    <div class="feature-info">
+                        <h4>Compromisso & Conformidade</h4>
+                        <p>Trabalho pautado na ética rigorosa para assegurar a conformidade legal e proteger o pilar da confiança do seu negócio.</p>
+                    </div>
+                </div>
+
+            </div> <!-- Fim features-grid -->
+
+            <!-- Botão de Ação (CTA) -->
+            <a href="#contato" class="cta-btn">
+                Falar com um Advogado Especialista
+                <i data-lucide="arrow-right"></i>
+            </a>
+            
+        </div> <!-- Fim about-content -->
+
+        <!-- Coluna Direita: Foto Profissional + Citação -->
+        <div class="about-media">
+            <div class="image-wrapper">
+                <img src="./images/andre.jpg" alt="Advogado Especialista" class="lawyer-img">
+                
+                <div class="badge-floating">
+                    <strong>Advocacia Trabalhista</strong>
+                    <span>Assessoria Corporativa</span>
                 </div>
             </div>
 
-        </div>
-    </section>
-
- <!-- FOOTER REFEITO -->
-    <footer class="site-footer">
-        <div class="footer-container">
-            
-            <!-- Coluna 1: Marca & Logo -->
-            <div class="footer-brand">
-                <div class="logo-box">
-                    <img src="./images/logo.png" alt="Logo André Morais" class="logo-symbol">
-                </div>
-                <p class="brand-description">
-                    Soluções jurídicas estratégicas e personalizadas para proteger e impulsionar negócios empresariais.
+            <div class="quote-card">
+                <p>
+                    "Nascemos do sentimento de que a advocacia trabalhista voltada para empresas carece de novas abordagens: mais ágeis, estratégicas e focadas em viabilizar novos negócios com total segurança."
                 </p>
             </div>
-
-            <!-- Coluna 2: Endereço -->
-            <div>
-                <h3 class="footer-title">Endereço</h3>
-                <ul class="footer-info">
-                    <li class="address-item">
-                        <i data-lucide="map-pin"></i>
-                        <span>
-                            Av. José Bonifácio Coutinho Nogueira, nº 150<br>
-                            Regus Galleria Plaza<br>
-                            Campinas - SP | CEP 13.091-611
-                        </span>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Coluna 3: Contatos -->
-            <div>
-                <h3 class="footer-title">Contato</h3>
-                <ul class="footer-info">
-                    <li>
-                        <i data-lucide="phone"></i>
-                        <a href="tel:1935781193">(19) 3578-1193</a>
-                    </li>
-                    <li>
-                        <i data-lucide="message-square"></i>
-                        <a href="https://wa.me/5512992306327" target="_blank">
-                            (12) 99230-6327 (WhatsApp)
-                        </a>
-                    </li>
-                    <li>
-                        <i data-lucide="mail"></i>
-                        <a href="mailto:andre.morais@andremorais.adv.br">andre.morais@andremorais.adv.br</a>
-                    </li>
-                </ul>
-            </div>
-
         </div>
 
-        <!-- Linha de Copyright -->
-        <div class="footer-bottom">
-            <p>&copy; 2026 André Morais Advocacia para Empresas. Todos os direitos reservados.</p>
-        </div>
-    </footer>
+    </div>
+  </section>
+<!-- ======== SEÇÃO DE ESTATÍSTICAS E DESTAQUES ======== -->
+  <section class="stats-banner-section">
+      <div class="stats-bar-banner">
+          
+          <!-- Item 1 -->
+          <div class="stat-item glow-effect">
+              <span class="stat-number">
+                  +<span class="counter" data-target="10">10</span> Anos
+              </span>
+              <span class="stat-label">de Atuação Jurídica</span>
+          </div>
 
+          <!-- Item 2 -->
+          <div class="stat-item glow-effect">
+              <span class="stat-label stat-label-top">FOCO EMPRESARIAL</span>
+              <span class="stat-number">
+                  <span class="counter" data-target="100">100</span>%
+              </span>
+          </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.9.0/countUp.umd.min.js"></script>
-<script>
-const observer = new IntersectionObserver((entries) => {
+          <!-- Item 3 -->
+          <div class="stat-item glow-effect">
+              <span class="stat-number">Especializada</span>
+              <span class="stat-label">Prevenção e Litígio</span>
+          </div>
 
-    entries.forEach(entry => {
+      </div>
+  </section>
+  <!-- ===================================================== -->
 
-        if (entry.isIntersecting) {
+  <!-- FOOTER REFEITO -->
+  <footer class="site-footer">
+      <div class="footer-container">
+          
+          <!-- Coluna 1: Marca & Logo -->
+          <div class="footer-brand">
+              <div class="logo-box">
+                  <img src="./images/logo.png" alt="Logo André Morais" class="logo-symbol">
+              </div>
+              <p class="brand-description">
+                  Soluções jurídicas estratégicas e personalizadas para proteger e impulsionar negócios empresariais.
+              </p>
+          </div>
 
-            new countUp.CountUp('saving1', 3.49, {
-                decimalPlaces: 2,
-                duration: 2.5
-            }).start();
+          <!-- Coluna 2: Endereço -->
+          <div>
+              <h3 class="footer-title">Endereço</h3>
+              <ul class="footer-info">
+                  <li class="address-item">
+                      <i data-lucide="map-pin"></i>
+                      <span>
+                          Av. José Bonifácio Coutinho Nogueira, nº 150<br>
+                          Regus Galleria Plaza<br>
+                          Campinas - SP | CEP 13.091-611
+                      </span>
+                  </li>
+              </ul>
+          </div>
 
-            new countUp.CountUp('saving2', 6.05, {
-                decimalPlaces: 2,
-                duration: 2.5
-            }).start();
+          <!-- Coluna 3: Contatos -->
+          <div>
+              <h3 class="footer-title">Contato</h3>
+              <ul class="footer-info">
+                  <li>
+                      <i data-lucide="phone"></i>
+                      <a href="tel:1935781193">(19) 3578-1193</a>
+                  </li>
+                  <li>
+                      <i data-lucide="message-square"></i>
+                      <a href="https://wa.me/5512992306327" target="_blank">
+                          (12) 99230-6327 (WhatsApp)
+                      </a>
+                  </li>
+                  <li>
+                      <i data-lucide="mail"></i>
+                      <a href="mailto:andre.morais@andremorais.adv.br">andre.morais@andremorais.adv.br</a>
+                  </li>
+              </ul>
+          </div>
 
-            observer.disconnect();
-        }
+      </div>
 
-    });
+      <!-- Linha de Copyright -->
+      <div class="footer-bottom">
+          <p>&copy; 2026 André Morais Advocacia para Empresas. Todos os direitos reservados.</p>
+      </div>
+  </footer>
 
-});
+  <!-- Script de funcionalidades em JavaScript do próprio projeto (se houver mais arquivos) -->
+  <script src="./js/main.js"></script>
   
-        lucide.createIcons();
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.9.0/countUp.umd.min.js"></script>
+  <script>
+      // Inicializa ícones Lucide
+      lucide.createIcons();
 
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const navLinks = document.getElementById('navLinks');
+      // Mobile Menu Toggle
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const navLinks = document.getElementById('navLinks');
 
-        if (mobileMenuBtn && navLinks) {
-          mobileMenuBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            navLinks.classList.toggle('active');
+      if (mobileMenuBtn && navLinks) {
+        mobileMenuBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          navLinks.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+          if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+            navLinks.classList.remove('active');
+          }
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
           });
+        });
+      }
 
-          document.addEventListener('click', (e) => {
-            if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
-              navLinks.classList.remove('active');
-            }
+      // Animação dos números na seção de conquistas
+      const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                  // Inicia animação para Card 1
+                  if (document.getElementById('saving1')) {
+                      new countUp.CountUp('saving1', 3.49, { decimalPlaces: 2, duration: 2.5 }).start();
+                  }
+                  // Inicia animação para Card 2
+                  if (document.getElementById('saving2')) {
+                      new countUp.CountUp('saving2', 6.05, { decimalPlaces: 2, duration: 2.5 }).start();
+                  }
+                  // Inicia animação para Card 3
+                  if (document.getElementById('saving3')) {
+                      new countUp.CountUp('saving3', 36.87, { decimalPlaces: 2, duration: 2.5 }).start();
+                  }
+                  observer.disconnect();
+              }
           });
+      });
 
-          navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-              navLinks.classList.remove('active');
-            });
-          });
-        }
-    </script>
+      // Começa a observar a seção de conquistas
+      const conquistasSec = document.getElementById('conquistas');
+      if (conquistasSec) {
+          observer.observe(conquistasSec);
+      }
+  </script>
 </body>
 
 </html>
